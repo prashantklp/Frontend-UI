@@ -12,16 +12,23 @@
 
 .brand-list {
   display: flex;
-  flex-direction: row; /* Ensure everything is in one row */
+  flex-direction: column;
   gap: 32px;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap; /* Wrap items on small screens */
+}
+
+@media (min-width: 768px) {
+  .brand-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .brand-item {
   opacity: 0.6;
   transition: opacity 0.3s ease;
+  text-align: center;
 }
 
 .brand-item:hover {
@@ -32,14 +39,18 @@
   font-size: 1.25rem;
   font-weight: 500;
   letter-spacing: 0.1em;
+  white-space: nowrap;
+  display: inline-block;
 }
 
 .brand-description {
-  flex: 1;
-  max-width: 500px;
+  flex: 1 1 100%;
+  max-width: 600px;
   color: #ccc;
   font-size: 1rem;
   line-height: 1.6;
+  text-align: center;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
@@ -49,5 +60,10 @@
 
   .brand-description {
     font-size: 1.125rem;
+    text-align: left;
+  }
+
+  .brand-item {
+    text-align: left;
   }
 }

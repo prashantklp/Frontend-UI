@@ -1,63 +1,132 @@
+/* Fixed Header Base */
 .site-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid #333;
-    padding: 1rem 2rem;
-  }
-  
-  .header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .logo {
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: white;
-  }
-  
-  .nav-links {
-  display: flex;
-  list-style: none;
-  gap: 0; /* reduced or removed space */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #333;
+  padding: 1rem 2rem;
 }
 
-  
+/* Header Layout */
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+/* Logo */
+.logo-container img {
+  height: 40px;
+}
+
+/* Hamburger Icon (Hidden on Desktop) */
+.hamburger {
+  display: none;
+  font-size: 1.75rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Nav Container */
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Nav List */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 0;
+}
+
+/* Nav Buttons */
+.nav-button {
+  padding: 0.5rem 2.5rem;
+  border-radius: 999px;
+  border: none;
+  color: #ccc;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: none;
+}
+
+.nav-button.active {
+  background: white;
+  color: black;
+  font-weight: 500;
+}
+
+/* Hire Button */
+.hire-button {
+  border: 1px solid white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 999px;
+  background: transparent;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hire-button.active {
+  background: white;
+  color: black;
+  font-weight: 500;
+}
+
+/* ------------------------- */
+/*        Responsive         */
+/* ------------------------- */
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-wrapper {
+    width: 100%;
+    flex-direction: column;
+    display: none;
+  }
+
+  .nav-wrapper.open {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    align-items: center;
+  }
+
   .nav-button {
-    padding: 0.5rem 2.5rem;
-    border-radius: 999px;
-    border: none;
-    color: #ccc;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    width: 90%;
+    padding: 0.75rem;
+    text-align: center;
   }
-  
-  .nav-button.active {
-    background: white;
-    color: black;
-    font-weight: 500;
-  }
-  
+
   .hire-button {
-    border: 1px solid white;
-    padding: 0.5rem 1.25rem;
-    border-radius: 999px;
-    background: transparent;
-    color: white;
-    font-weight: 500;
-    cursor: pointer;
+    margin-top: 1rem;
+    width: 90%;
+    text-align: center;
   }
-  .hire-button.active{
-    background: white;
-    color: black;
-    font-weight: 500;
-  }
+}

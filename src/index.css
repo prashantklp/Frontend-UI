@@ -2,12 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
   font-family: 'Inter', system-ui, sans-serif;
   background-color: #000;
@@ -16,11 +18,12 @@ body {
   overflow-x: hidden;
 }
 
+/* Smooth Scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -32,38 +35,37 @@ html {
   border-radius: 4px;
 }
 
+/* --- ⚠️ Header Utility Notes --- */
 /* ✅ DO NOT override .site-header */
+/* ✅ Use your own .header if needed */
+
 .header-fixed {
-  /* REMOVE this block if using `.site-header` */
+  /* REMOVE this if using .site-header component */
   /* position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 50;
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid #1f1f1f; */
+     top: 0;
+     left: 0;
+     right: 0;
+     z-index: 50;
+     backdrop-filter: blur(12px);
+     border-bottom: 1px solid #1f1f1f; */
 }
 
-/* ✅ REMOVE if you're using `.site-header .header-container` */
+/* ✅ Optional reset if you’re replacing container styles */
 .header-container {
-  all: unset; /* Optional: Reset all styles if conflicts happen */
+  all: unset;
 }
 
-/* ✅ REMOVE conflicting nav styles if you're using your own classes like `.nav-button` */
+/* ✅ Navigation Reset — Remove if not using */
 .nav-menu {
-  display: contents; /* Or remove completely */
+  display: contents;
 }
 
-/* ✅ Remove or reset .nav-link if not used */
 .nav-link,
 .nav-link.active {
   all: unset;
 }
 
-/* ✅ Keep other components as is */
-/* ...sections, experience, brand, etc. ... */
-
-/* Animations */
+/* --- Animations --- */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-5px); }
@@ -82,12 +84,12 @@ html {
   animation: scroll 30s linear infinite;
 }
 
-/* Responsive scaling */
+/* --- Responsive Typography Utilities (optional override) --- */
 @media (max-width: 767px) {
-  .section-heading { font-size: 2.5rem; }
-  .hero-title { font-size: 2rem; }
-  .work-title { font-size: 1.5rem; }
-  .blog-title { font-size: 1.5rem; }
-  .testimonial-text { font-size: 1.25rem; }
-  .footer-cta { font-size: 3rem; }
+  .section-heading   { font-size: 2.5rem; }
+  .hero-title        { font-size: 2rem; }
+  .work-title        { font-size: 1.5rem; }
+  .blog-title        { font-size: 1.5rem; }
+  .testimonial-text  { font-size: 1.25rem; }
+  .footer-cta        { font-size: 3rem; }
 }

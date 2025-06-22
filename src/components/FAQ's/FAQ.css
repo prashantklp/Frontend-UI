@@ -1,11 +1,11 @@
 /* === Full-Width FAQ Section === */
 .faq-section {
-  width: 100vw; /* Ensure full screen width */
+  width: 100vw;
   margin: 0;
   padding: 80px 0;
-  background-color: #0e0e0e; /* Replace #00f0ff */
+  background-color: #0e0e0e;
   color: white;
-  overflow-x: hidden; /* Prevent horizontal scroll on small screens */
+  overflow-x: hidden;
 }
 
 /* Centered container inside full-width */
@@ -21,6 +21,7 @@
   align-items: center;
   gap: 12px;
   margin-bottom: 48px;
+  flex-wrap: wrap;
 }
 
 .faq-header svg {
@@ -47,6 +48,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .faq-answer {
@@ -59,4 +62,41 @@
 /* Toggle icon */
 .faq-toggle-icon {
   font-size: 1.5rem;
+}
+
+/* ------------------- RESPONSIVE ------------------- */
+@media (max-width: 768px) {
+  .faq-title {
+    font-size: 1.75rem;
+  }
+
+  .faq-question {
+    font-size: 1.125rem;
+  }
+
+  .faq-answer {
+    font-size: 0.95rem;
+  }
+
+  .faq-toggle-icon {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-title {
+    font-size: 1.5rem;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+  }
+
+  .faq-answer {
+    font-size: 0.9rem;
+  }
+
+  .faq-toggle-icon {
+    font-size: 1.1rem;
+  }
 }
