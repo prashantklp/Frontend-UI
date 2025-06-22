@@ -38,16 +38,6 @@ npm run dev
 npm start
 
 
-##  Folder Structure
-
-Frontend-UI/
-├── src/
-│   ├── components/     # Reusable UI components
-│   ├── pages/          # Example usage pages
-│   └── App.jsx         # Root component
-├── public/
-├── package.json
-└── README.md
 
 
 
