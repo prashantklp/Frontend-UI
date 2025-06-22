@@ -16,9 +16,9 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 1px;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 900;
   line-height: 1.2;
   text-transform: uppercase;
@@ -28,6 +28,7 @@
 @media (min-width: 768px) {
   .hero-heading {
     font-size: 4rem;
+    font-size: var(--text-6xl);
   }
 }
 
@@ -45,7 +46,7 @@
   margin: 0 8px;
   overflow: hidden;
   border-radius: 30%;
-  width: 200px;
+  width: 100px;
   height: 50px;
   background-color: #222;
 }
